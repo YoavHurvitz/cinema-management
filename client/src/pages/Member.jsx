@@ -8,6 +8,7 @@ import { addSubscription, fetchSubscriptions, deleteSubscription } from '../redu
 import EditMember from '../components/EditMember';
 import AddSubscription from '../components/AddSubscription';
 import api from '../services/api';
+import Navbar from '../components/Navbar';
 
 function Member() {
   const { id } = useParams();
@@ -102,7 +103,9 @@ function Member() {
   };
 
   return (
+   
     <Container maxWidth="md" sx={{ mt: 4 }}>
+       <Navbar/> 
       <Typography variant="h4" gutterBottom>{member.name}</Typography>
       <Typography variant="body1">Email: {member.email}</Typography>
       <Typography variant="body1">City: {member.city}</Typography>

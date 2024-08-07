@@ -21,18 +21,28 @@ function App() {
     dispatch(fetchAllData());
   }, [dispatch]);
 
+  const appContainerStyle = {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/members" element={<Members />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/movie/:id" element={<Movie />} />
+      <div style={appContainerStyle}>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/members" element={<Members />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/movie/:id" element={<Movie />} />
           <Route path="/member/:id" element={<Member />} />
-      </Routes>
+        </Routes>
+      </div>
     </ThemeProvider>
   );
 }

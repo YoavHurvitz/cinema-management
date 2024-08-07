@@ -77,6 +77,7 @@ function Navbar() {
               Welcome, {user.name}
             </Typography>
           )}
+          {user && (
           <StyledButton
             variant="outlined"
             color="inherit"
@@ -86,6 +87,8 @@ function Navbar() {
           >
             Movies
           </StyledButton>
+          )}
+          {user && (
           <StyledButton
             variant="outlined"
             color="inherit"
@@ -94,7 +97,9 @@ function Navbar() {
             active={location.pathname === '/members'}
           >
             Members & Subscriptions
+          
           </StyledButton>
+             )}
           {user && (
             <IconButton
               size="large"
@@ -107,6 +112,7 @@ function Navbar() {
               <Avatar>{user.name ? user.name.charAt(0) : 'U'}</Avatar>
             </IconButton>
           )}
+       
           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}
