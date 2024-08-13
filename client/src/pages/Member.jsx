@@ -105,7 +105,6 @@ function Member() {
   return (
    
     <Container maxWidth="md" sx={{ mt: 4 }}>
-       <Navbar/> 
       <Typography variant="h4" gutterBottom>{member.name}</Typography>
       <Typography variant="body1">Email: {member.email}</Typography>
       <Typography variant="body1">City: {member.city}</Typography>
