@@ -74,7 +74,7 @@ function Navbar() {
         <ButtonContainer>
           {user && (
             <Typography variant="subtitle1" sx={{ mr: 2 }}>
-              Welcome, {user.name}
+              Welcome, {user.name} 
             </Typography>
           )}
           {user && (
